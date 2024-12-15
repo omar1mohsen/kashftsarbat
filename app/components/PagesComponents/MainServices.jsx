@@ -30,10 +30,9 @@ const MainServices = ({ mainServicesData }) => {
       <div className="main-services__content">
         <span className="badge animate__animated">خدمة تسريب المياه</span>
         <h2 className="main-services__title main-sec-title animate__animated">{mainServicesData?.title}</h2>
-        <div
+        <p
           className="main-services__description animate__animated"
-          dangerouslySetInnerHTML={{ __html: mainServicesData?.desc }}
-        />
+        >{mainServicesData?.desc}</p>
         <ul className="main-services__list animate__animated">
           {services?.map((service, index) => (
             <li key={`service-text-${index}`} className="main-services__list-item">
