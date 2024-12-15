@@ -276,7 +276,7 @@
     @apply relative;
     &:before {
       content: '';
-      @apply absolute w-[94%] md:w-full h-full inset-0 bg-bodyColor rotate-[-14.86deg] rounded-[20px] -z-[1];
+      @apply absolute w-[93%] md:w-full h-full inset-0 bg-bodyColor rotate-[-14.86deg] rounded-[20px] -z-[1];
     }
   }
 
