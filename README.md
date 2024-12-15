@@ -1,6 +1,4 @@
 
-Here’s a README based on your provided points:
-
 kashftsarbat task
 This task is a demo application built in a short amount of time to showcase responsive web design. It is based on a Figma design and implemented using Next.js and TailwindCSS for styling.
 
