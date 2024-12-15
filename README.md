@@ -29,17 +29,19 @@ TailwindCSS – Preferred utility-first CSS framework for styling.
 Setup Instructions
 To run this project locally, follow these steps:
 
+To install the project, follow these steps:
+
 Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/project-name.git
+git clone https://github.com/omar1mohsen/kashftsarbat.git
 Navigate to the project directory:
 
 bash
 Copy code
-cd project-name
-Install dependencies:
+cd kashftsarbat
+Install the required dependencies:
 
 bash
 Copy code
@@ -49,7 +51,7 @@ Start the development server:
 bash
 Copy code
 npm run dev
-Open your browser and visit http://localhost:3000 to see the demo in action.
+Open your browser and go to http://localhost:3000 to view the project.
 
 Demo Notes
 This is a demo project and was completed in a short amount of time, so some features may be incomplete or not fully optimized.
