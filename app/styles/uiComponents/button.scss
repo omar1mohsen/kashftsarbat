@@ -1,0 +1,6 @@
+.createApp-Button{
+    @apply bg-main-500 text-white rounded-md hover:bg-main-500 border-none font-semibold h-auto;
+    &.main-btn{
+        @apply bg-main-300 md:w-[188px] w-28 h-12 md:h-[60px] text-white rounded-[90px] border-none font-bold;
+    }
+}

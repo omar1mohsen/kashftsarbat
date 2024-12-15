@@ -1,0 +1,55 @@
+
+.footer {
+    @apply bg-[#FAFDFF] mt-20 md:mt-[150px];
+  &__container {
+    @apply container pt-[100px];
+  }
+
+  &__grid {
+    @apply grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 text-center md:text-right;
+  }
+
+  &__logo-section {
+    @apply flex flex-col items-center md:items-start gap-6 mb-4 col-span-2;
+  }
+
+  &__description {
+    @apply text-[#171717] text-lg leading-[30px] mb-4 max-w-[365px];
+  }
+
+  &__social-icons {
+    @apply flex items-center gap-5;
+  }
+
+  &__contact {
+    @apply mb-4 md:mb-11 max-md:col-span-2;
+  }
+
+  &__title {
+    @apply font-semibold text-blackText text-[20px] mb-4 md:mb-11;
+  }
+
+  &__contact-link {
+    @apply flex items-center max-md:justify-center gap-2 text-blackText hover:text-main-300 text-lg;
+  }
+
+  &__section {
+    @apply space-y-2;
+  }
+
+  &__links {
+    @apply space-y-2;
+  }
+
+  &__link {
+    @apply text-blackText hover:text-main-300 text-lg;
+  }
+
+  &__buttons {
+    @apply flex items-center justify-center md:justify-end gap-4 mt-10 mb-8 md:mt-16 md:mb-12 2xl:me-28;
+  }
+
+  &__bottom {
+    @apply text-center text-white text-lg pt-9 pb-8 bg-main-500;
+  }
+}

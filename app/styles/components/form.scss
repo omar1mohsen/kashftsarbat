@@ -1,0 +1,41 @@
+.auth-form{
+    .ant-modal-content{
+        @apply pt-8 pb-12 px-8 md:pt-11 md:pb-16 md:px-14 lg:w-[635px] rounded-[32px] #{!important} ;
+    }
+
+    .createApp-Button.main-btn{
+        @apply bg-main-300 w-full h-8 md:h-16 text-white rounded-[30px] md:rounded-[100px] border-none font-bold #{!important};
+    }
+
+    .ant-form-item-label label {
+        @apply text-sm leading-[20.88px] text-blackText font-bold mb-3 before:hidden  #{!important} ;
+    }
+
+    .ant-form-item-control-input,
+    .ant-input-outlined,
+    .ant-select-selector{
+        @apply min-h-[65px] border-[#F8F8FF] border rounded-[10px] #{!important};
+    }
+
+    .ant-select-selector{
+        @apply min-w-28;
+    }
+    .ant-select-single{
+        @apply min-h-[65px];
+    }
+    .ant-select-selection-item{
+        @apply pe-0 ps-6 text-blackText font-semibold #{!important};
+    }
+    .ant-select-arrow{
+        @apply start-2.5 text-base leading-none h-auto  text-blackText;
+    }
+    .ant-otp{
+        @apply w-full;
+    }
+    .otp-form-item{
+        label{
+            @apply text-main-300 #{!important} ;
+        }
+    }
+}
+

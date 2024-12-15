@@ -1,0 +1,416 @@
+.divider {
+  @apply w-full h-px bg-white/10;
+}
+
+// General styles for Hero Section
+.hero-section {
+  @apply bg-main-500 text-white relative;
+  .hero-content {
+    @apply container pt-[45px] relative overflow-hidden;
+
+    .top-hero {
+      @apply max-md:flex-wrap max-md:gap-4 flex items-start justify-between;
+
+      .hero-title {
+        @apply text-2xl md:text-3xl max-w-[367px] md:leading-[47px];
+      }
+
+      .hero-description {
+        @apply pe-4 py-3 text-xs md:px-[29px] md:py-[22.5px] md:bg-white/5 rounded-[50px]  max-w-[336px] md:text-[15px] leading-[23px] font-normal md:text-center;
+      }
+    }
+
+    .hero-image-wrapper {
+      @apply relative w-fit mx-auto -mt-4 2xl:-mt-12 min-h-[405px];
+      .hero-image {
+        @apply w-4/5 h-auto mx-auto md:w-[482px] md:h-[600px];
+        // background: linear-gradient(180deg, rgba(50, 101, 226, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+      }
+
+      .customer-rate {
+        @apply hidden md:block absolute top-1/2 -translate-y-1/2 -end-32;
+
+        .rate-card {
+          @apply bg-[#0A4088] ps-2.5 pe-9 pt-3 rounded-[29px];
+          mask: url(/images/rate-mask.png) no-repeat;
+          mask-size: cover;
+
+          .rate-info {
+            @apply flex items-center gap-1;
+
+            .customer-image {
+              @apply rounded-full;
+            }
+
+            .customer-name {
+              @apply font-medium leading-[23.52px];
+            }
+
+            .customer-role {
+              @apply text-textBody-300 text-xs font-normal leading-[17.64px];
+            }
+          }
+
+          .rating {
+            @apply mt-[17px] min-w-[65px] mb-6 bg-white/5 rounded-[20px] py-1 
+                inline-flex items-center justify-center gap-1;
+
+            p {
+              @apply text-[#F5BE0B];
+            }
+          }
+        }
+
+        .arrow-button {
+          @apply absolute -bottom-1 -end-1 w-11 h-11 rounded-full bg-[#0A4088] 
+              inline-flex items-center justify-center;
+        }
+      }
+    }
+
+    .video-section {
+      @apply absolute bottom-16 md:bottom-[102px] container start-0 flex items-end justify-between;
+
+      .video-thumbnail {
+        @apply overflow-hidden;
+        &::after {
+          @apply content-[""] w-full h-full absolute inset-0 bg-[#00377366] transition-all duration-300;
+        }
+
+        .video-image {
+          @apply w-[100px] h-[100px]  md:w-[213px] md:h-[213px] object-cover;
+        }
+
+        &:hover {
+          &::after {
+            @apply bg-[#00387325];
+          }
+        }
+      }
+
+      .scroll-arrow {
+        @apply w-12 h-12 md:w-[97px] md:h-[97px] flex items-center justify-center bg-[#3162DA] rounded-full;
+
+        .rotate-icon {
+          @apply w-6 h-6 md:w-10 md:h-10 rotate-[270deg];
+        }
+      }
+    }
+  }
+}
+
+// General styles for about us Section
+.about-us {
+  @apply  flex items-center gap-8 max-lg:flex-wrap;
+
+  &__content {
+    @apply w-full lg:w-1/2;
+  }
+
+  &__cards {
+    @apply grid grid-cols-12 gap-x-4 gap-y-8 md:gap-x-[25px] md:gap-y-[65px];
+  }
+
+  &__card {
+    @apply col-span-6 flex items-center gap-2.5;
+  }
+
+  &__icon {
+    @apply min-w-12 min-h-12 sm:min-w-20 sm:min-h-20 rounded-circle bg-bodyColor flex items-center justify-center;
+
+    &-image {
+      @apply w-12 h-12 sm:w-20 sm:h-20;
+    }
+  }
+
+  &__card-title {
+    @apply mb-2 text-base md:text-xl font-semibold leading-none;
+  }
+
+  &__card-description {
+    @apply text-textBody-300 max-md:text-xs;
+  }
+
+  &__button {
+    @apply  max-md:my-8 md:mt-10;
+  }
+
+  &__video {
+    @apply w-full lg:w-1/2 about-video-section flex items-center justify-center;
+  }
+
+  &__video-thumbnail {
+    @apply w-[300px] h-[300px] md:w-[417px] md:h-[417px];
+  }
+}
+
+
+// General styles for services Section
+.services-wrap{
+  @apply px-5 md:ps-[42px] md:pe-[135px] py-10 md:pb-[85px] rounded-[30px] md:rounded-[60px] bg-bodyColor before:z-[2] relative before:content-[""] before:w-full before:h-[410px] before:absolute before:bg-[url('/images/services-bg.png')] before:bg-no-repeat before:left-0 before:bottom-0 before:bg-cover before:opacity-5;
+  .services-badge{
+    @apply  px-[31.5px] pt-2 pb-4 bg-white text-main-300 font-bold rounded-[32px];
+  }
+  .services-sliders-wrap{
+    @apply relative flex items-start gap-6 max-lg:flex-col;
+    .main-service-card{
+      .card-title{
+        @apply my-10 mb-4  lg:mt-[57px] lg:mb-[62px] lg:text-[40px] lg:leading-[58.8px] text-2xl font-bold max-w-[640px] opacity-0;
+      }
+      .card-desc{
+        @apply text-textBody-300 max-w-[411px] opacity-0;
+      }
+    }
+    .services-thumb-card {
+      @apply w-40 h-40 lg:h-[220px] lg:w-[220px] bg-white flex flex-col gap-2 lg:gap-[18px] items-center justify-center rounded-[30px] shadow-cardShadow;
+      .thumb-image{
+        @apply w-32 h-36 lg:w-[150px] lg:h-[170px] object-cover;
+      }
+    }
+    .thumb-title{
+      @apply text-center mt-3 lg:mt-[18px] text-main-300 font-bold w-full;
+    }
+  }
+}
+.services-thumbs {
+  @apply w-full lg:w-fit lg:max-h-[560px] lg:absolute lg:end-[125px] lg:-top-[90px] z-[2] #{!important};
+}
+
+.about-video-section {
+  .video-thumbnail {
+    &::before,
+    &::after {
+      @apply content-[""] w-full h-full absolute rounded-circle;
+    }
+    &::before {
+      @apply bg-bodyColor -top-8 -end-8 -z-[1];
+    }
+    &::after {
+      @apply border border-solid border-main-300 -bottom-2.5 -start-4 -z-[1];
+    }
+  }
+}
+
+.mainSwiper {
+  .swiper-slide-active {
+    .card-title,
+    .card-desc {
+      @apply duration-1000 transition-opacity opacity-100 #{!important};
+    }
+  }
+}
+
+.testimonials-swiper {
+  position: initial !important;
+  .swiper-wrapper {
+    @apply pb-20;
+  }
+  .swiper-pagination-bullet {
+    @apply transition-all duration-300;
+    &.swiper-pagination-bullet-active {
+      @apply w-[30px] h-2 rounded-[41px] bg-main-300 #{!important};
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply top-10 w-8 h-8 md:w-12 md:h-12 bg-main-300 rounded-circle text-white;
+    &::after {
+      @apply max-md:text-xs #{!important} ;
+      font-size: larger;
+      font-weight: 800;
+    }
+  }
+  .swiper-button-prev {
+    @apply left-12 md:left-[60px] right-auto #{!important};
+  }
+  .swiper-button-next {
+    @apply left-2 md:left-0 right-auto #{!important};
+  }
+}
+
+.testimonial-card {
+  @apply w-full md:w-[calc(50%-11px)] p-10 bg-bodyColor rounded-[20px];
+}
+
+
+// General styles for services Section
+.experts {
+
+  &__header {
+    @apply flex items-center justify-between mb-6;
+  }
+
+  &__title {
+    @apply mt-2 mb-0 #{!important};
+  }
+  &__grid {
+    @apply grid grid-cols-12 gap-[25px];
+  }
+
+  &__card {
+    @apply col-span-4 flex flex-col items-center;
+  }
+
+  &__image {
+    @apply mb-6 hover:scale-[1.03] transition-transform duration-300;
+  }
+
+  &__name {
+    @apply mb-1 text-lg md:text-[24px] md:leading-[35.28px] font-medium;
+  }
+
+  &__job {
+    @apply text-textBody-300 max-sm:text-sm;
+  }
+}
+
+// General styles for main service Section
+.main-services {
+  @apply flex items-center gap-8 max-md:flex-wrap;
+
+  &__image-container {
+    @apply w-full md:w-1/2 flex items-center justify-center;
+  }
+
+  &__image-figure {
+    @apply relative;
+    &:before {
+      content: '';
+      @apply absolute w-[94%] md:w-full h-full inset-0 bg-bodyColor rotate-[-14.86deg] rounded-[20px] -z-[1];
+    }
+  }
+
+  &__image {
+    @apply max-md:w-full max-md:min-w-[350px] max-md:h-auto;
+  }
+
+  &__content {
+    @apply w-full md:w-1/2;
+  }
+
+
+  &__title {
+    @apply mt-2 mb-6 #{!important};
+  }
+
+  &__description {
+    @apply text-textBody-300 mb-6;
+  }
+
+  &__list {
+    @apply list-none p-0;
+  }
+
+  &__list-item {
+    @apply flex items-center gap-2 mb-4;
+  }
+
+  &__button {
+    @apply mt-10;
+  }
+}
+
+// General styles for offers Section
+
+.offers {
+  @apply mt-[150px] bg-main-500 overflow-hidden;
+
+  &__container {
+    @apply container pt-10 flex gap-16 justify-center max-md:flex-col;
+  }
+
+  &__column {
+    @apply w-full md:w-1/3 flex flex-col gap-10;
+
+    &--left {
+      @apply items-start md:gap-[125px] max-md:order-1;
+    }
+
+    &--middle {
+      @apply pt-[65px] bg-white/15 rounded-t-[52px] max-md:order-3 flex items-center justify-center;
+    }
+
+    &--right {
+      @apply items-start justify-end md:gap-[125px] max-md:order-2 md:mb-10;
+    }
+  }
+
+  &__card {
+    @apply flex items-start gap-2.5 max-w-[293px];
+  }
+
+  &__icon {
+    @apply min-w-16 min-h-16 rounded-[50%] flex items-center justify-center;
+  }
+
+  &__card-title {
+    @apply mb-4 text-base text-white font-semibold leading-none;
+  }
+
+  &__card-description {
+    @apply text-textBody-300 text-sm;
+  }
+}
+
+// General styles for our mission Section
+
+.our-mission {
+  @apply  flex md:gap-14 max-md:flex-col-reverse;
+
+  &__content {
+    @apply w-full md:w-1/2;
+  }
+
+  &__title {
+    @apply mb-6 #{!important};
+  }
+
+  &__text-container {
+    @apply max-w-[400px];
+  }
+
+  &__description {
+    @apply text-textBody-300;
+  }
+
+  &__arrow {
+    @apply me-10 ms-auto mt-2.5;
+  }
+
+  &__links {
+    @apply flex items-center gap-4;
+  }
+
+  &__image-container {
+    @apply w-full md:w-1/2 flex items-center justify-center;
+  }
+
+  &__figure {
+    @apply relative;
+  }
+
+  .mission-circles {
+    @apply absolute w-4/5  h-4/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  
+    .main {
+      @apply absolute w-full h-full inset-0 z-0   bg-[#EEEEFF]  rounded-circle;
+    }
+  
+    .big,
+    .small {
+      @apply absolute content-[""] rounded-circle  -z-[1];
+    }
+  
+    .small {
+      @apply bg-[#F7F7FF] w-1/2 h-1/2 -top-4 -end-10;
+    }
+  
+    .big {
+      @apply w-3/4 h-3/4  bg-[#F7F7F7] opacity-60 -bottom-4 -start-4;
+    }
+  }
+  
+  &__image {
+    @apply z-[1] relative;
+  }
+}

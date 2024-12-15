@@ -1,0 +1,29 @@
+.header-wrapper{
+    @apply container py-7 flex items-center justify-between;
+    .header-links{
+        @apply hidden md:flex items-center gap-12 text-white/90 text-base font-normal;
+        a{
+            @apply relative;
+            &::before{
+                @apply content-[""] w-full h-px absolute -bottom-4 bg-white opacity-0 transition-all duration-300;
+            }
+            &:hover::before{
+                @apply opacity-100 -bottom-2;
+            }
+            &.active{
+                @apply font-semibold text-white;
+            }
+        }
+    }
+
+    .header-actions{
+        @apply flex items-center gap-2 md:gap-4 ;
+        .createApp-Button:not(.main-btn){
+            @apply bg-white/5 p-2 md:p-[13px] hover:bg-white/10 relative #{!important};
+            &.notification-btn::before{
+                @apply content-[""] w-[10.6px] h-[10.6px] absolute top-0 start-0 border-2 border-solid border-main-500 rounded-circle bg-[#FF0000] z-[1];
+            }
+        }
+    }
+
+}

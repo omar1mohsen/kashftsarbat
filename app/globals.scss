@@ -1,0 +1,79 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-noto-arabic: "Noto Sans Arabic", sans-serif;
+}
+
+// Global styles
+body {
+  font-family: var(--font-noto-arabic), Arial, sans-serif;
+  font-weight: 400;
+  line-height: 23.52px;
+  background-color: #fff; 
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+  // * ---------------------------- start styles --------------------------------- //
+
+.main-section{
+  @apply container mt-20 md:mt-[150px] ;
+}
+
+.video-thumbnail {
+  @apply relative rounded-full;
+
+  .play-button {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+      z-[1] w-8 h-8 md:w-[46px] md:h-[46px] inline-flex items-center justify-center bg-main-500 rounded-full transition-all duration-300 cursor-pointer;
+  }
+
+  &:hover{
+    .play-button{
+        @apply scale-110 ;
+    }
+}
+}
+
+.video-modal{
+    @apply w-[450px];
+    .ant-modal-content{
+        @apply  p-0 pt-8 ;
+    }
+}
+
+.badge{
+  @apply rounded-[30px] md:rounded-[50px] px-[26.5px] py-[6.5px] bg-[#3162DA0A] leading-[23.52px] font-semibold inline-flex items-center justify-center text-main-300;
+}
+
+.main-sec-title{
+  @apply text-2xl mt-10 mb-8 md:mt-[51px] md:mb-[62px] md:text-[40px] md:leading-[58.8px] z-[2] font-bold;
+}
+
+.icon-hover:hover{
+  path{
+    @apply transition-colors duration-300 fill-main-300;
+  }
+}
+
+.ant-modal-close{
+  @apply top-6 end-auto right-6 #{!important};
+  .ant-modal-close-x{
+    @apply text-[20px] text-blackText #{!important};
+  }
+}
