@@ -30,7 +30,7 @@ const VideoThumbnail = ({ heroData,width,height,className,showImage }) => {
       {isPlaying && (
         <Modal open={isPlaying} onCancel={()=>setIsPlaying(false)} footer={false} className="video-modal">
             <video
-              className="w-full h-[350px]"
+              className="w-full h-[350px] object-cover"
               src={heroData?.video}
               controls={false}
               autoPlay

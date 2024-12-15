@@ -41,7 +41,7 @@ const ServicesSlider = ({ slides }) => {
 
 
   const renderThumbCardTemplate = (slide)=>(
-    <SwiperSlide key={`thumb-${slide.id}`} className="w-fit cursor-pointer">
+    <SwiperSlide key={`thumb-${slide.id}`} className="w-[calc(50%-20px)] sm:w-fit cursor-pointer">
           <div className="services-thumb-card " >
             <Image
             width={150}

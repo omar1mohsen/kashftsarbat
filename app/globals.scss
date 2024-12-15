@@ -53,7 +53,11 @@ p {
 .video-modal{
     @apply w-[450px];
     .ant-modal-content{
-        @apply  p-0 pt-8 ;
+        @apply  p-0 ;
+        button.ant-modal-close,
+        .ant-modal-close-x{
+          @apply text-white text-2xl font-bold #{!important};
+        }
     }
 }
 
@@ -76,4 +80,8 @@ p {
   .ant-modal-close-x{
     @apply text-[20px] text-blackText #{!important};
   }
+}
+
+.ant-modal-root .ant-modal{
+  @apply max-md:w-[calc(100%-2.5rem)] #{!important};
 }

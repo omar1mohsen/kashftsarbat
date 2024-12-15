@@ -21,9 +21,9 @@
     }
 
     .hero-image-wrapper {
-      @apply relative w-fit mx-auto -mt-4 2xl:-mt-12 min-h-[405px];
+      @apply relative w-fit mx-auto -mt-4 2xl:-mt-12 min-h-[400px];
       .hero-image {
-        @apply w-4/5 h-auto mx-auto md:w-[482px] md:h-[600px];
+        @apply w-4/5 h-auto max-md:min-h-[400px] mx-auto md:w-[482px] md:h-[600px];
         // background: linear-gradient(180deg, rgba(50, 101, 226, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
       }
 
@@ -149,7 +149,7 @@
 .services-wrap{
   @apply px-5 md:ps-[42px] md:pe-[135px] py-10 md:pb-[85px] rounded-[30px] md:rounded-[60px] bg-bodyColor before:z-[2] relative before:content-[""] before:w-full before:h-[410px] before:absolute before:bg-[url('/images/services-bg.png')] before:bg-no-repeat before:left-0 before:bottom-0 before:bg-cover before:opacity-5;
   .services-badge{
-    @apply  px-[31.5px] pt-2 pb-4 bg-white text-main-300 font-bold rounded-[32px];
+    @apply px-5 py-2 md:px-[31.5px] md:pt-2 md:pb-4 bg-white text-main-300 font-bold rounded-[32px];
   }
   .services-sliders-wrap{
     @apply relative flex items-start gap-6 max-lg:flex-col;
@@ -162,7 +162,7 @@
       }
     }
     .services-thumb-card {
-      @apply w-40 h-40 lg:h-[220px] lg:w-[220px] bg-white flex flex-col gap-2 lg:gap-[18px] items-center justify-center rounded-[30px] shadow-cardShadow;
+      @apply sm:w-40 sm:h-40 lg:h-[220px] lg:w-[220px] bg-white flex flex-col gap-2 lg:gap-[18px] items-center justify-center rounded-[30px] shadow-cardShadow;
       .thumb-image{
         @apply w-32 h-36 lg:w-[150px] lg:h-[170px] object-cover;
       }
@@ -260,7 +260,7 @@
   }
 
   &__job {
-    @apply text-textBody-300 max-sm:text-sm;
+    @apply text-textBody-300  max-sm:text-sm;
   }
 }
 

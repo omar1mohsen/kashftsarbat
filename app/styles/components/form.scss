@@ -4,7 +4,7 @@
     }
 
     .createApp-Button.main-btn{
-        @apply bg-main-300 w-full h-8 md:h-16 text-white rounded-[30px] md:rounded-[100px] border-none font-bold #{!important};
+        @apply bg-main-300 w-full h-12 md:h-16 text-white rounded-[30px] md:rounded-[100px] border-none font-bold #{!important};
     }
 
     .ant-form-item-label label {
