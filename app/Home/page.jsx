@@ -8,7 +8,6 @@ import Offers from '@/components/PagesComponents/Offers';
 import OurMission from '@/components/PagesComponents/OurMission';
 import Footer from  "@/components/LayoutComponents/Footer";
 import '@/styles/pageComponents/Home.scss';
-import ScrollAnimation from "./ScrollAnimation"
 
 const Home = ({ homeData }) => {
 
@@ -23,7 +22,6 @@ const Home = ({ homeData }) => {
       <Offers offersData={homeData?.what_we_offers} />
       <OurMission />
       <Footer />
-      <ScrollAnimation/>
     </>
   );
 };

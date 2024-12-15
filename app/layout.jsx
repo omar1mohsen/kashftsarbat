@@ -1,5 +1,5 @@
 import { Noto_Sans_Arabic } from "next/font/google";
-
+import ScrollAnimation from "@/components/PagesComponents/ScrollAnimation";
 // Import styles
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="ar" dir="rtl">
       <body className={`${notoSansArabic.variable} antialiased`}>
           {children}
+          <ScrollAnimation/>
       </body>
     </html>
   );

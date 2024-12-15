@@ -10,21 +10,24 @@ import "swiper/css/thumbs";
 
 const ServicesSlider = ({ slides }) => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
-  console.log("🚀 ~ thumbsSwiper:", thumbsSwiper)
   const [windowWidth, setWindowWidth] = React.useState(0);
+  const thumbsSwiperRef = React.useRef(null);
 
   useEffect(() => {
       const handleResize = () => {
         setWindowWidth(window.innerWidth);
-        console.log("🚀 ~ handleResize ~ window.innerWidth:", window.innerWidth)
       };
 
       setWindowWidth(window.innerWidth);
-
       window.addEventListener('resize', handleResize);
-
       return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  React.useEffect(() => {
+    if (thumbsSwiper && thumbsSwiper.destroyed) {
+      setThumbsSwiper(null);
+    }
+  }, [thumbsSwiper]);
 
   const sliderOptions = {
     effect: "fade",
@@ -36,15 +39,6 @@ const ServicesSlider = ({ slides }) => {
     navigation:false,
   };
 
-    // Ref to store thumbsSwiper instance
-    const thumbsSwiperRef = React.useRef(null);
-
-    React.useEffect(() => {
-      // Ensure thumbsSwiper is initialized properly on page load
-      if (thumbsSwiper && thumbsSwiper.destroyed) {
-        setThumbsSwiper(null);
-      }
-    }, [thumbsSwiper]);
 
   const renderThumbCardTemplate = (slide)=>(
     <SwiperSlide key={`thumb-${slide.id}`} className="w-fit cursor-pointer">

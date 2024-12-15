@@ -1,6 +1,6 @@
 
 // ! ----------------------------- imports start ---------------------------------- //
-import ServicesSlider from "@/components/SharedComponents/UiComponents/sliders/servicesSlider"
+import ServicesSlider from "../SharedComponents/UiComponents/sliders/ServicesSlider"
 
 // ! ----------------------------- imports End ---------------------------------- //
 

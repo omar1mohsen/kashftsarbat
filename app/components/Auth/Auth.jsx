@@ -93,7 +93,7 @@ const AuthBtn = ({handleOpen}) => {
       }
     }
     setLoader(false)
-  },[])
+  },[setUserData])
 
   const handleClick = ()=>{
     setLoader(true)
